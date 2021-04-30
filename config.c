@@ -2517,7 +2517,7 @@ int repo_config_get_fsmonitor(struct repository *r)
 {
 	if (!r->worktree) {
 		/* FSMonitor makes no sense in bare repositories */
-		core_fsmonitor = 0;
+		core_fsmonitor = NULL;
 		return 1;
 	}
 
